@@ -21,6 +21,10 @@ li a {
 .navbg {
     background-color: #f3f3f3;
     z-index: 1;
+    top: 0;
+    width: 100%;
+    left: 0;
+    position: absolute;
 }
 
 .nav {
@@ -40,18 +44,16 @@ li a {
 
 .fixedheader {
     width: 90vw;
-    margin: auto;
-    position: -webkit-sticky;
-    /* Safari */
-    position: sticky;
+    margin-top: 8vh;
 }
 
 .maincontainer {
-    width: 90vw;
+    /* width: 90vw; */
     padding-top: 0.2vh;
-    height: 72vh;
-    margin: auto;
+    /* height: 72vh; */
     background-color: #f3f3f3;
+    height: 73vh;
+    margin: auto;
 }
 
 .maincontainer2 {
