@@ -4,7 +4,6 @@ from app import app, db
 from app.src.member import Member
 from app.forms import LoginForm, MemberRegistrationForm
 
-
 @app.route("/library/<library>")
 def library(library):
     return render_template("{}.html".format(library))
@@ -74,7 +73,6 @@ def login():
         user.update_location()
         return redirect(url_for("dashboard"))
     return render_template("login.html", title="Sign In", form=form)
-
 
 @app.route("/home")
 @app.route('/')
