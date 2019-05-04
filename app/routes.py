@@ -4,8 +4,6 @@ from app import app, db
 from app.src.member import Member
 from app.forms import LoginForm, MemberRegistrationForm
 
-import os
-
 
 @app.route("/library/<library>")
 def library(library):
