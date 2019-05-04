@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src ="script.js"></script>
+</head>
+<body>
+    <ul class=navbg>
+        <li><a href="dashboard.html" class=nav><i class="fa fa-home"></i></a></li>
+        <li><a href="groups.html" class=nav>Groups</a></li>
+        <li><a href="communities.html" class=nav>Events</a></li>
+        <!--<li><a></a><i class="fa fa-search"></i></a></i>-->
+        <li><a href="profile.html". class=nav style="float: right">Sunny Feng</a></li> <!--Name should change depending on whos logged in-->
+    </ul>
+    <div class=fixedheader>
+        <center>
+            <h1>Sunny's Dashboard!</h1>
+            <button class=button onclick="mygroups()">My Groups</button>
+            <button class=button onclick="groupsuggestions()">Group Suggestions</button>
+            <button class=button onclick="myevents()">My Events</button>
+            <button class=button onclick="eventsuggestions()">Event Suggestions</button>
+        </center>
+    </div>
+    
+    <div class=maincontainer id="dash"></div>
+
+</body>
+</html>

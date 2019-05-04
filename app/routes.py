@@ -1,5 +1,5 @@
 from flask import render_template, flash, redirect, url_for
-from flask_login import current_user, login_user, logout_user
+from flask_login import current_user, login_user, logout_user, login_required
 from app import app, db
 from app.src.member import Member
 from app.forms import LoginForm, MemberRegistrationForm
@@ -25,7 +25,6 @@ def logout():
     logout_user()
     return redirect(url_for('home'))
 
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
@@ -37,10 +36,20 @@ def login():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
+        user.update_location()
         return redirect(url_for('home'))
     return render_template('login.html', title='Sign In', form=form)
 
+@app.route("/profile",methods=["GET"])
+def profile():
+    return render_template("profile.html",title="Profile")
 
+@app.route("/dashboard",methods=["GET","POST"])
+@login_required
+def dashboard():
+    #Update dashboard based on IP Geolocation
+    return render_template("dashboard.html",title="Dashboard")
+    
 @app.route("/home")
 @app.route("/")
 def home():
