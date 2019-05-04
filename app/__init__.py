@@ -13,4 +13,4 @@ login = LoginManager(app)
 login.login_view = "login"
 
 from app import routes
-from app.src import member
+from app.src import member, event

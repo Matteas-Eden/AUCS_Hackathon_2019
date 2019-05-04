@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="center">
+    <h1>Register Event</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.name.label }}<br>
+            {{ form.name(size=32) }}<br>
+            {% for error in form.location.errors %}
+            <span style="color: #ED4D52;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.location.label }}<br>
+            {{ form.location(size=32) }}<br>
+            {% for error in form.location.errors %}
+            <span style="color: #ED4D52;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.time.label }}<br>
+            {{ form.time(size=32) }}<br>
+            {% for error in form.time.errors %}
+            <span style="color: #ED4D52;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+</div>
+
+{% endblock %}

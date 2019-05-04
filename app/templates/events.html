@@ -2,4 +2,20 @@
 
 {% block content %}
 
+<div>
+    <p>Want to register and event? Click <a href="{{ url_for('event_registration') }}">here</a>!</p>
+
+    {% for event in events %}
+    <p>
+        Name: {{ event.name }}
+    </p>
+    <p>
+        Location: {{ event.location }}
+    </p>
+    <p>
+        Time: {{ event.time }}
+    </p>
+    {% endfor %}
+</div>
+
 {% endblock %}
