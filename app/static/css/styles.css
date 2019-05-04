@@ -3,7 +3,8 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    position: -webkit-sticky; /* Safari */
+    position: -webkit-sticky;
+    /* Safari */
     position: sticky;
     top: 0;
 }
@@ -40,7 +41,8 @@ li a {
 .fixedheader {
     width: 90vw;
     margin: auto;
-    position: -webkit-sticky; /* Safari */
+    position: -webkit-sticky;
+    /* Safari */
     position: sticky;
 }
 
@@ -80,7 +82,7 @@ li a {
 }
 
 .suggested {
-    width:21.7vw;
+    width: 21.7vw;
     height: 17vw;
     background-color: white;
     padding: 0.5vw;
@@ -91,29 +93,30 @@ li a {
 /* this will hopefully be for captions (the group names) */
 .imageHolder {
     position: relative;
-    width:21.7vw;
+    width: 21.7vw;
     height: 17vw;
 }
 
 .tablecontainer {
-  position: relative;
-  transition: .5s ease;
+    position: relative;
+    transition: .5s ease;
 }
+
 .tablecontainer:hover {
     opacity: 0.3;
     transition: .5s ease;
-  }
+}
 
 .caption {
-  position: absolute;
-  top: 70%;
-  left: 0;
-  width: 21.7vw;
-  font-size: 22px;
-  padding: 10px;
-  color: #000;
-  background: white;
-  text-align:center;
-  font-weight:bold;
-  opacity:0.8;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    width: 21.7vw;
+    font-size: 22px;
+    padding: 10px;
+    color: #000;
+    background: white;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0.8;
 }

@@ -1,10 +1,10 @@
 from app import db, login
+from app.config import Config
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 import requests
 import json
 
-API_KEY = '03323b4d7a3740f1b37d65b5f1c0c17d'
 
 class Member(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -25,11 +25,15 @@ class Member(UserMixin, db.Model):
     def update_location(self):
         self.location = get_district()
 
+
 @login.user_loader
 def load_user(id):
     return Member.query.get(int(id))
 
+
 def get_district():
-    r = requests.get('https://api.ipgeolocation.io/ipgeo?apiKey='+API_KEY)
+    r = requests.get(
+        'https://api.ipgeolocation.io/ipgeo?apiKey=' +
+        Config.API_KEY)
     geoData = json.loads(r.text)
     return geoData["district"]

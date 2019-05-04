@@ -1,0 +1,42 @@
+html {
+    padding: 20px;
+    /* background: lightblue; */
+    background-image: url("snow.png");
+}
+
+#image {
+    display: inline-block;
+}
+
+#profile_name {
+    display: inline-block;
+}
+
+#div_1 {
+    /* justify-content: center; */
+    float: left;
+    display: flex;
+    justify-content: center;
+}
+
+#div_2 {
+    display: inline-block;
+}
+
+#keywords {
+    width: 300px;
+    height: 20px;
+}
+
+#eachInterest {
+    background: #C0C0C0;
+    width: auto;
+    border-radius: 15px;
+    clear: both;
+    float: left;
+    text-indent: 5px
+}
+
+#delete {
+    margin: 5px;
+}

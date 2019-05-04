@@ -2,4 +2,29 @@
 
 {% block content %}
 
+<div div="div_1">
+  <!-- <img id = "image" src="profile_image.jpg" height="100" width="100"> -->
+  <img id="image" src="{{ url_for('static', filename='pics/girl-svgrepo-com.svg') }}" height="100" width="100">
+  <br>
+  <h1 id="profile_name">{{ current_user.username }}</h1>
+</div>
+<div id="div_2">
+  <h2>Email</h2>
+  <h3 id="email">{{ current_user.email }}</h3>
+</div>
+
+<div>
+  <h2>Interests</h2>
+  <form>
+    <h3>Add your interests</h3>
+    <input type="text" id="keywords" placeholder="Place keywords e.g school, tech, sports">
+    <input type="button" value="Submit" onclick="submit_keyword()">
+  </form>
+</div>
+
+<div>
+  <ul id="keyword_tags">
+  </ul>
+</div>
+
 {% endblock %}
