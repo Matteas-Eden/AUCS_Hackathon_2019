@@ -2,17 +2,21 @@
 
 <head>
     {% if title %}
-    <title>{{ title }} - Microblog</title>
+    <title>{{ title }} - Eventigate</title>
     {% else %}
-    <title>Welcome to Microblog</title>
+    <title>Welcome to Eventigate</title>
     {% endif %}
 </head>
 
 <body>
     <div>
-        Volunteerly:
+        Eventigate:
         <a href="{{ url_for('home') }}">Home</a>
+        {% if current_user.is_anonymous %}
         <a href="{{ url_for('login') }}">Login</a>
+        {% else %}
+        <a href="{{ url_for('logout') }}">Logout</a>
+        {% endif %}
     </div>
     {% with messages = get_flashed_messages() %}
     {% if messages %}
