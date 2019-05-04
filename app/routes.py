@@ -71,10 +71,20 @@ def login():
             flash("Invalid username or password")
             return redirect(url_for("login"))
         login_user(user, remember=form.remember_me.data)
+        user.update_location()
         return redirect(url_for("dashboard"))
     return render_template("login.html", title="Sign In", form=form)
 
+@app.route("/profile",methods=["GET"])
+def profile():
+    return render_template("profile.html",title="Profile")
 
+@app.route("/dashboard",methods=["GET","POST"])
+@login_required
+def dashboard():
+    #Update dashboard based on IP Geolocation
+    return render_template("dashboard.html",title="Dashboard")
+    
 @app.route("/home")
 @app.route('/')
 def home():

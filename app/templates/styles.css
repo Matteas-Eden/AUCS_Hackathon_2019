@@ -1,0 +1,119 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.8vw;
+}
+
+.navbg {
+    background-color: #f3f3f3;
+    z-index: 1;
+}
+
+.nav {
+    color: #666;
+    float: left;
+    font-size: 2vw;
+}
+
+.subnav {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.8vw;
+}
+
+.fixedheader {
+    width: 90vw;
+    margin: auto;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+}
+
+.maincontainer {
+    width: 90vw;
+    padding-top: 0.2vh;
+    height: 72vh;
+    margin: auto;
+    background-color: #f3f3f3;
+}
+
+.maincontainer2 {
+    width: 90vw;
+    height: auto;
+    margin: auto;
+    background-color: #f3f3f3;
+}
+
+.button {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 10px 15px;
+    text-align: center;
+    display: inline-block !important;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.button:hover {
+    color: rgba(0, 0, 0, 0.5)
+}
+
+.button:active {
+    color: gray;
+}
+
+.suggested {
+    width:21.7vw;
+    height: 17vw;
+    background-color: white;
+    padding: 0.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw
+}
+
+/* this will hopefully be for captions (the group names) */
+.imageHolder {
+    position: relative;
+    width:21.7vw;
+    height: 17vw;
+}
+
+.tablecontainer {
+  position: relative;
+  transition: .5s ease;
+}
+.tablecontainer:hover {
+    opacity: 0.3;
+    transition: .5s ease;
+  }
+
+.caption {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  width: 21.7vw;
+  font-size: 22px;
+  padding: 10px;
+  color: #000;
+  background: white;
+  text-align:center;
+  font-weight:bold;
+  opacity:0.8;
+}
