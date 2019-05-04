@@ -30,9 +30,9 @@ def groups():
     return render_template("groups.html")
 
 
-@app.route("/communities")
-def communities():
-    return render_template("communities.html")
+@app.route("/events")
+def events():
+    return render_template("events.html")
 
 
 @app.route("/profile")
