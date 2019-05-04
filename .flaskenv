@@ -1,1 +1,1 @@
-FLASK_APP=Eventigate.py
+FLASK_APP=eventigate.py
