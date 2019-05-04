@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class=fixedheader>
+    <center>
+        <h1>Welcome to Pakuranga Library!</h1>
+        <button class=button onclick="suggested()">Events</button>
+        <button class=button onclick="upcoming()">Event Suggestions</button>
+    </center>
+</div>
+
+<div class=maincontainer id="pakurangalibrary">
+    <img style="width: 90vw; height: 75vh;" src="{{ url_for('static', filename='pics/library1.jpg') }}">
+</div>
+
+{% endblock %}

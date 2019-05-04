@@ -6,18 +6,31 @@
     {% else %}
     <title>Welcome to Eventigate</title>
     {% endif %}
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
 
 <body>
-    <div>
-        Eventigate:
-        <a href="{{ url_for('home') }}">Home</a>
+    <ul class=navbg>
         {% if current_user.is_anonymous %}
-        <a href="{{ url_for('login') }}">Login</a>
+        <li><a href="{{ url_for('home') }}" class=nav><i class="fa fa-home"></i></a></li>
         {% else %}
-        <a href="{{ url_for('logout') }}">Logout</a>
+        <li><a href="{{ url_for('dashboard') }}" class=nav><i class="fa fa-home"></i></a></li>
         {% endif %}
-    </div>
+        <li><a href="{{ url_for('groups') }}" class=nav>Groups</a></li>
+        <li><a href="{{ url_for('communities') }}" class=nav>Events</a></li>
+        <!--<li><a></a><i class="fa fa-search"></i></a></i>-->
+        {% if current_user.is_anonymous %}
+        <li><a class="nav-url" href="{{ url_for('login') }}" class=nav style=" float: right">Login</a></li>
+        {% else %}
+        <li><a class="nav-url" href="{{ url_for('logout') }}" class=nav style="float: right">Logout</a></li>
+        <li><a href="{{ url_for('profile') }}" class=nav style="float: right">{{ current_user.username }}</a></li>
+        {% endif %}
+        <!--Name should change depending on whos logged in-->
+    </ul>
     {% with messages = get_flashed_messages() %}
     {% if messages %}
     <ul>

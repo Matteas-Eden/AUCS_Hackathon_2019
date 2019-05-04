@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class=fixedheader>
+    <center>
+        <h1>{{current_user.username}}'s Dashboard!</h1>
+        <button class=button onclick="mygroups()">My Groups</button>
+        <button class=button onclick="groupsuggestions()">Group Suggestions</button>
+        <button class=button onclick="myevents()">My Events</button>
+        <button class=button onclick="eventsuggestions()">Event Suggestions</button>
+    </center>
+</div>
+
+<div class=maincontainer id="dash"></div>
+
+{% endblock %}
