@@ -1,3 +1,3 @@
-def Event:
+class Event:
     def __init__(self):
         pass
