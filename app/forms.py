@@ -1,6 +1,7 @@
 from flask_login import UserMixin
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, DateTimeField
+from wtforms.fields.html5 import DateField
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo
 from app.src.member import Member
 
@@ -29,3 +30,10 @@ class MemberRegistrationForm(FlaskForm):
         user = Member.query.filter_by(email=email.data).first()
         if user is not None:
             raise ValidationError("Please use a different email address.")
+
+
+class EventRegistrationForm(FlaskForm):
+    name = StringField("Event Name", validators=[DataRequired()])
+    location = StringField("Location", validators=[DataRequired()])
+    time = DateField("Date", validators=[DataRequired()])
+    submit = SubmitField("Create Event")

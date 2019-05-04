@@ -3,7 +3,6 @@
 {% block content %}
 
 <div div="div_1">
-  <!-- <img id = "image" src="profile_image.jpg" height="100" width="100"> -->
   <img id="image" src="{{ url_for('static', filename='pics/profile.png') }}" height="100" width="100">
   <br>
   <h1 id="profile_name">{{ current_user.username }}</h1>
@@ -11,6 +10,15 @@
 <div id="div_2">
   <h2>Email</h2>
   <h3 id="email">{{ current_user.email }}</h3>
+</div>
+
+<script type=text/javascript> $(function() { $('a#test').bind('click', function() {
+  $.getJSON('/background_process_test', function(data) { }); return false; }); }); </script> <div class='container'>
+<h3>Test</h3>
+<form>
+  <a href=# id=test><button class='btn btn-default'>Test</button></a>
+</form>
+
 </div>
 
 <div>
