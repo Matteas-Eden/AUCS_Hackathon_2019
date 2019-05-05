@@ -2,138 +2,130 @@
 
 {% block content %}
 
-<body>
-    <div class=fixedheader>
-        <center>
-            <h1>Groups!</h1>
-            <button class=button onclick="mygroups">Companies</button>
-            <button class=button onclick="groupsuggestions">Universities</button>
-            <button class=button onclick="myevents">Libraries</button>
-            <button class=button onclick="eventsuggestions">Schools</button>
-            <button class=button onclick="eventsuggestions">Clubs</button>
-        </center>
-    </div>
+<div class=fixedheader>
+    <center>
+        <h1>Groups!</h1>
+        <a class=button href="{{ url_for('groups', group='Company') }}">Companies</a>
+        <a class=button href="{{ url_for('groups', group='School') }}">Schools</a>
+        <a class=button href="{{ url_for('groups', group='Library')}}">Libraries</a>
+        <a class=button href="{{ url_for('groups', group='Club') }}">Clubs</a>
+    </center>
+</div>
 
-    <div class=maincontainer2>
-        <table style="width:100%">
-            <tr>
-                <td>
-                    <a href="{{ url_for('library', library='pakurangalibrary') }}">
+<div class=maincontainer2>
+    <table style="width:100%">
+        <tr>
+            <td>
+                <a href="{{ url_for('library', library='pakurangalibrary') }}">
+                    <div class="tablecontainer">
+                        <img src="{{ url_for('static', filename='pics/pakurangalibrary.jpg') }}" alt="Group1"
+                            class="imageHolder">
+                        <div class="caption">Pakuranga Library</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="{{ url_for('library', library='pakurangalibrary') }}">
+                    <div class="tablecontainer">
+                        <img src="{{ url_for('static', filename='pics/botanylibrary.jpg') }}" alt="Group1"
+                            class="imageHolder">
+                        <div class="caption">Panmure Library</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="{{ url_for('library', library='pakurangalibrary') }}">
+                    <div class="tablecontainer">
+                        <img src="{{ url_for('static', filename='pics/aucklandlibrary.jpg') }}" alt="Group1"
+                            class="imageHolder">
+                        <div class="caption">Botany Library</div>
+                    </div>
+            </td>
+            <td>
+                <a href="{{ url_for('library', library='pakurangalibrary') }}">
+                    <div class="tablecontainer">
+                        <img src="{{ url_for('static', filename='pics/panmurelibrary.jpg') }}" alt="Group1"
+                            class="imageHolder">
+                        <div class="caption">Auckland Library</div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="{{ url_for('library', library='pakurangalibrary') }}">
+                    <div class="tablecontainer">
+                        <img src="{{ url_for('static', filename='pics/avondaleschool.jpg') }}" alt="Group1"
+                            class="imageHolder">
+                        <div class="caption">Avondale School</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="{{ url_for('library', library='pakurangalibrary') }}">
+                    <div class="tablecontainer">
                         <div class="tablecontainer">
-                            <img src="{{ url_for('static', filename='pics/library1.jpg') }}" alt="Group1"
+                            <img src="{{ url_for('static', filename='pics/universityofauckland.jpg') }}" alt="Group1"
                                 class="imageHolder">
-                            <div class="caption">Pakuranga Library</div>
+                            <div class="caption">University of Auckland</div>
                         </div>
-                    </a>
-                </td>
-                <td>
-                    <a href="{{ url_for('library', library='pakurangalibrary') }}">
-                        <div class="tablecontainer">
-                            <img src="{{ url_for('static', filename='pics/library2.jpg') }}" alt="Group1"
-                                class="imageHolder">
-                            <div class="caption">Panmure Library</div>
-                        </div>
-                    </a>
-                </td>
-                <td>
-                    <a href="{{ url_for('library', library='pakurangalibrary') }}">
-                        <div class="tablecontainer">
-                            <img src="{{ url_for('static', filename='pics/library3.jpg') }}" alt="Group1"
-                                class="imageHolder">
-                            <div class="caption">Botany Library</div>
-                        </div>
-                </td>
-                <td>
-                    <a href="{{ url_for('library', library='pakurangalibrary') }}">
-                        <div class="tablecontainer">
-                            <img src="{{ url_for('static', filename='pics/library4.jpg') }}" alt="Group1"
-                                class="imageHolder">
-                            <div class="caption">Auckland Library</div>
-                        </div>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="{{ url_for('library', library='pakurangalibrary') }}">
-                        <div class="tablecontainer">
-                            <img src="{{ url_for('static', filename='pics/Avondale.jpg') }}" alt="Group1"
-                                class="imageHolder">
-                            <div class="caption">Avondale School</div>
-                        </div>
-                    </a>
-                </td>
-                <td>
-                    <a href="{{ url_for('library', library='pakurangalibrary') }}">
-                        <div class="tablecontainer">
-                            <div class="tablecontainer">
-                                <img src="{{ url_for('static', filename='pics/uoa.jpg') }}" alt="Group1"
-                                    class="imageHolder">
-                                <div class="caption">University of Auckland</div>
-                            </div>
-                    </a>
-                </td>
-                <td>
-                    <a href="{{ url_for('library', library='pakurangalibrary') }}">
-                        <div class="tablecontainer">
-                            <img src="{{ url_for('static', filename='pics/st kents.jpg') }}" alt="Group1"
-                                class="imageHolder">
-                            <div class="caption">Saint Kentigern College</div>
-                        </div>
-                    </a>
-                </td>
-                <td>
-                    <a href="{{ url_for('library', library='pakurangalibrary') }}">
-                        <div class="tablecontainer">
-                            <img src="{{ url_for('static', filename='pics/Epsom.jpg') }}" alt="Group1"
-                                class="imageHolder">
-                            <div class="caption">Epsom</div>
-                        </div>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="{{ url_for('library', library='pakurangalibrary') }}">
-                        <div class="tablecontainer">
-                            <img src="{{ url_for('static', filename='pics/place1.jpg') }}" alt="Group1"
-                                class="imageHolder">
-                            <div class="caption">Public Place</div>
-                        </div>
-                    </a>
-                </td>
-                <td>
-                    <a href="{{ url_for('library', library='pakurangalibrary') }}">
-                        <div class="tablecontainer">
-                            <img src="{{ url_for('static', filename='pics/place2.jpg') }}" alt="Group1"
-                                class="imageHolder">
-                            <div class="caption">Public Place 2</div>
-                        </div>
-                    </a>
-                </td>
-                <td>
-                    <a href="{{ url_for('library', library='pakurangalibrary') }}">
-                        <div class="tablecontainer">
-                            <img src="{{ url_for('static', filename='pics/place3.jpg') }}" alt="Group1"
-                                class="imageHolder">
-                            <div class="caption">Public Place 3</div>
-                        </div>
-                    </a>
-                </td>
-                <td>
-                    <a href="{{ url_for('library', library='pakurangalibrary') }}">
-                        <div class="tablecontainer">
-                            <img src="{{ url_for('static', filename='pics/school1.jpg') }}" alt="Group1"
-                                class="imageHolder">
-                            <div class="caption">Public Place 4</div>
-                        </div>
-                    </a>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <br>
-    <p>
-</body>
+                </a>
+            </td>
+            <td>
+                <a href="{{ url_for('library', library='pakurangalibrary') }}">
+                    <div class="tablecontainer">
+                        <img src="{{ url_for('static', filename='pics/saintkentigerncollege.jpg') }}" alt="Group1"
+                            class="imageHolder">
+                        <div class="caption">Saint Kentigern College</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="{{ url_for('library', library='pakurangalibrary') }}">
+                    <div class="tablecontainer">
+                        <img src="{{ url_for('static', filename='pics/epsomschool.jpg') }}" alt="Group1"
+                            class="imageHolder">
+                        <div class="caption">Epsom</div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="{{ url_for('library', library='pakurangalibrary') }}">
+                    <div class="tablecontainer">
+                        <img src="{{ url_for('static', filename='pics/place1.jpg') }}" alt="Group1" class="imageHolder">
+                        <div class="caption">Public Place</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="{{ url_for('library', library='pakurangalibrary') }}">
+                    <div class="tablecontainer">
+                        <img src="{{ url_for('static', filename='pics/place2.jpg') }}" alt="Group1" class="imageHolder">
+                        <div class="caption">Public Place 2</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="{{ url_for('library', library='pakurangalibrary') }}">
+                    <div class="tablecontainer">
+                        <img src="{{ url_for('static', filename='pics/place3.jpg') }}" alt="Group1" class="imageHolder">
+                        <div class="caption">Public Place 3</div>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="{{ url_for('library', library='pakurangalibrary') }}">
+                    <div class="tablecontainer">
+                        <img src="{{ url_for('static', filename='pics/school1.jpg') }}" alt="Group1"
+                            class="imageHolder">
+                        <div class="caption">Public Place 4</div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
 
 {% endblock %}
