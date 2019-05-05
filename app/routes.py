@@ -3,6 +3,7 @@ from flask_login import current_user, login_user, logout_user, login_required
 from app import app, db
 from app.src.member import Member
 from app.src.event import Event
+from app.src.group import Group
 from app.forms import LoginForm, MemberRegistrationForm, EventRegistrationForm
 
 
@@ -33,9 +34,25 @@ def dashboard():
     return render_template("dashboard.html")
 
 
-@app.route("/groups")
+@app.route("/groups/<group>")
 @login_required
-def groups():
+def groups(group):
+    if group == "Library":
+        return render_template(
+            "libraries.html", groups=Group.query.filter(
+                Group.group.contains("Library")))
+    elif group == "School":
+        return render_template(
+            "schools.html", groups=Group.query.filter(
+                Group.group.contains("School")))
+    elif group == "Company":
+        return render_template(
+            "companies.html", groups=Group.query.filter(
+                Group.group.contains("Company")))
+    elif group == "Club":
+        return render_template(
+            "companies.html", groups=Group.query.filter(
+                Group.group.contains("Company")))
     return render_template("groups.html")
 
 
