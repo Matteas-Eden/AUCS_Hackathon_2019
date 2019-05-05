@@ -14,8 +14,8 @@
     <img id="image" style="width: 90vw;height: auto;" src="{{ url_for('static', filename='pics/calendar.png') }}" height="100" width="100">
 </div>
 
-<div class=fixedheader>
-    <p>Want to register and event? Click <a href="{{ url_for('event_registration') }}">here</a>!</p>
+<center><div class=fixedheader>
+    <p>Want to register or suggest an event? Click <a href="{{ url_for('event_registration') }}">here</a>!</p>
 
     {% for event in events %}
     <p>
@@ -28,6 +28,6 @@
         Time: {{ event.time }}
     </p>
     {% endfor %}
-</div>
+</div></center>
 
 {% endblock %}

@@ -1,23 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<div div="div_1">
+<br><br><br>
+<div style="margin-top: 2vh" id="div_1">
   <img id="image" src="{{ url_for('static', filename='pics/profile.png') }}" height="100" width="100">
   <br>
   <h1 id="profile_name">{{ current_user.username }}</h1>
-</div>
-<div id="div_2">
-  <h2>Email</h2>
-  <h3 id="email">{{ current_user.email }}</h3>
+  <br>
+  <h2>Email: {{ current_user.email }}</h2>
+  <!-- <h3 id="email">{{ current_user.email }}</h3> -->
 </div>
 
 <script type=text/javascript> $(function() { $('a#test').bind('click', function() {
   $.getJSON('/background_process_test', function(data) { }); return false; }); }); </script> <div class='container'>
-<h3>Test</h3>
+<!-- <h3>Test</h3>
 <form>
   <a href=# id=test><button class='btn btn-default'>Test</button></a>
-</form>
+</form> -->
 
 </div>
 

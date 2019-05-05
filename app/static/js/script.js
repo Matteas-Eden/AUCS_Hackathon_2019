@@ -1,5 +1,7 @@
 
 loaded = false;
+let n = 0;
+let x = 0;
 
 function mygroups() {
   let table = '<table><tr> \
@@ -107,13 +109,21 @@ function suggested() {
 
 function suggestions() {
   let table = '<table><tr> \
-    <td><div class=suggested></td> \
-    <td><div class=suggested></td> \
-    <td><div class=suggested></td> \
-    <td><div class=suggested></td> \
+    <td><div class=suggested><h2>Basics of Webdesign</h2><br><br>Idea: A workshop which covers the basics of css and html <br><br> <button onclick="increment()">Vote</button><div id=num>0</div></td> \
+    <td><div class=suggested><h2>Rust</h2><br><br>Idea: A workshop to teach students and children how to use rust <br><br> <button onclick="increment1()">Vote</button><div id=num1>0</div></td> \
     </tr></table>'
   document.getElementById('eventspage').innerHTML =
       '<center><br><h2>Vote for you favourite events!</h2>' + table + '<br></center>'; 
+}
+
+function increment() {
+  n += 1;
+  document.getElementById('num').innerHTML = n; 
+}
+
+function increment1() {
+  x += 1;
+  document.getElementById('num1').innerHTML = x; 
 }
 
 function moremyevents() {
@@ -128,8 +138,8 @@ function moremyevents() {
 
 function suggestedforyou() {
   let table = '<table><tr> \
-    <td><div class=suggested><h2>Robotics Workshop</h2>Where: Santa Clara County Library<br><br> When: 5 May 2019, 10:30 - 12:30 <br><br> Organiser: Robogals, a group from the University of Auckland run by engineering students. <br><br> Description: To introduce children to the idea of Engineering. </td>\
-    <td><div class=suggested><h2>Basics of Javascript</h2>Where: Santa Clara County School<br><br> When: 16 May 2019, 10:30 - 12:30 <br><br> Organiser: AUCS, a group of Computer Science students from the University of Auckland. <br><br> Description: To introduce children Javascript. <br><br></td> \
+    <td><div class=suggested><h2>Python101 Workshop</h2>Where: Campbell Library<br><br> When: 5 May 2019, 10:30 - 12:30 <br><br> Organiser: A group of students from CalTech will are holding an event to teach children how to code. </td>\
+    <td><div class=suggested><h2>Basics of Scratch</h2>Where: Santa Clara County High School<br><br> When: 16 May 2019, 10:30 - 12:30 <br><br> Organiser: Code club will be holding an event teaching children between the ages of 5 - 8, how to use scratch.<br><br></td> \
     </tr></table>'
 
   document.getElementById('eventspage').innerHTML = 

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<div class=fixedheader>
 <div class="center">
     <h1>Sign In</h1>
     <form action="" method="post" novalidate>
@@ -24,6 +24,7 @@
         <p>{{ form.submit() }}</p>
         <p>Don't have an account? Click <a href="{{ url_for('register') }}">here</a></p>
     </form>
+</div>
 </div>
 
 {% endblock %}

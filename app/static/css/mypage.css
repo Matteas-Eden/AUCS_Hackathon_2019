@@ -8,18 +8,19 @@ html {
     display: inline-block;
 }
 
-#profile_name {
-    display: inline-block;
-}
+/* #profile_name {
+    /* display: inline-block; */
+} */
 
 #div_1 {
     /* justify-content: center; */
-    float: left;
+    /* float: left; */
     display: flex;
     justify-content: center;
 }
 
 #div_2 {
+    margin-top: 20vh;
     display: inline-block;
 }
 
