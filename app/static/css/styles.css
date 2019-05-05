@@ -84,7 +84,8 @@ li a {
 }
 
 .suggested {
-    width: 21.7vw;
+    position: relative;
+    width: 20vw;
     height: 17vw;
     background-color: white;
     padding: 0.5vw;

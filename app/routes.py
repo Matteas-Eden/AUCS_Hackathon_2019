@@ -54,6 +54,11 @@ def event_registration():
     return render_template("event_registration.html", form=form)
 
 
+@app.route("/events/myevents")
+@login_required
+def my_events():
+    return ""
+
 @app.route("/events")
 @login_required
 def events():

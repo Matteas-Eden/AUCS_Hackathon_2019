@@ -2,7 +2,19 @@
 
 {% block content %}
 
-<div>
+<div class=fixedheader>
+    <center>
+        <h1>Events!</h1>
+        <button class=button onclick="moremyevents()">My Events</button>
+        <button class=button onclick="suggestions()">Event Suggestions</button>
+        <button class=button onclick="suggestedforyou()">Other Events</button>
+    </center>
+</div>
+<div class=maincontainer2 id='eventspage'>
+    <img id="image" style="width: 90vw;height: auto;" src="{{ url_for('static', filename='pics/calendar.png') }}" height="100" width="100">
+</div>
+
+<div class=fixedheader>
     <p>Want to register and event? Click <a href="{{ url_for('event_registration') }}">here</a>!</p>
 
     {% for event in events %}
