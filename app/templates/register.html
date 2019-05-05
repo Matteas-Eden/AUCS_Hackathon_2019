@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<div class=fixedheader>
 <h1>Register</h1>
 <form action="" method="post">
     {{ form.hidden_tag() }}
@@ -35,5 +35,6 @@
     </p>
     <p>{{ form.submit() }}</p>
 </form>
+</div>
 
 {% endblock %}
