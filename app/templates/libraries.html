@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class=fixedheader>
+    <center>
+        <h1>Libraries!</h1>
+        <a class=button href="{{ url_for('groups', group='Company') }}">Companies</a>
+        <a class=button href="{{ url_for('groups', group='School') }}">Schools</a>
+        <a class=button href="{{ url_for('groups', group='Club') }}">Clubs</a>
+    </center>
+</div>
+
+<div class=maincontainer2>
+    <table style="width:100%">
+        {% for group in groups %}
+        <td>
+            <a href="{{ url_for('library', library='pakurangalibrary') }}">
+                <div class="tablecontainer">
+                    <img src="{{ url_for('static', filename='pics/' + group.picture) }}" alt="Group1"
+                        class="imageHolder">
+                    <div class="caption">{{ group.name }}</div>
+                </div>
+            </a>
+        </td>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}
