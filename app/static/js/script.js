@@ -28,14 +28,8 @@ async function groupsuggestions() {
   var location = document.getElementById('user_district').innerText;
   console.log(location);
   let table = '<table><tr> \
-  <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/pakurangalibrary.jpg><div class=caption>Pakuranga Library</div></div></a></td> \
-  <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/botanylibrary.jpg><div class=caption>Botany Library</div></div></a></td> \
   <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/aucklandlibrary.jpg><div class=caption>Auckland Library</div></div></a></td>\
-  <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/panmurelibrary.jpg><div class=caption>Panmure Library</div></div></a></td> \
-    </tr><tr> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place1.jpg><div class=caption>Point Chevalier</div></div></a></td> \
     <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place2.jpg><div class=caption>Auckland Central</div></div></a></td> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place3.jpg><div class=caption>Avondale School</div></div></a></td> \
     <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/school1.jpg><div class=caption>See More</div></div></a></td> \
     </tr></table>'
   document.getElementById('dash').innerHTML =
