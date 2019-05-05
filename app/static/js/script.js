@@ -5,15 +5,15 @@ let x = 0;
 
 function mygroups() {
   let table = '<table><tr> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/library1.jpg><div class=caption>Library 1</div></div></a></td> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/library2.jpg><div class=caption>Library 1</div></div></a></td> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/library3.jpg><div class=caption>Library 1</div></div></a></td>\
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/library4.jpg><div class=caption>Library 1</div></div></a></td> \
+    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/pakurangalibrary.jpg><div class=caption>Pakuranga Library</div></div></a></td> \
+    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/botanylibrary.jpg><div class=caption>Botany Library</div></div></a></td> \
+    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/aucklandlibrary.jpg><div class=caption>Auckland Library</div></div></a></td>\
+    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/panmurelibrary.jpg><div class=caption>Panmure Library</div></div></a></td> \
     </tr><tr> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place1.jpg><div class=caption>Library 1</div></div></a></td> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place2.jpg><div class=caption>Library 1</div></div></a></td> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place3.jpg><div class=caption>Library 1</div></div></a></td> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/school1.jpg><div class=caption>See More!</div></div></a></td> \
+    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place1.jpg><div class=caption>Point Chevalier</div></div></a></td> \
+    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place2.jpg><div class=caption>Auckland Central</div></div></a></td> \
+    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place3.jpg><div class=caption>Avondale School</div></div></a></td> \
+    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/school1.jpg><div class=caption>See More</div></div></a></td> \
     </tr></table>'
   document.getElementById('dash').innerHTML =
       '<center><h1>My Groups</h1>' + table + '</center>';
@@ -28,30 +28,31 @@ async function groupsuggestions() {
   var location = document.getElementById('user_district').innerText;
   console.log(location);
   let table = '<table><tr> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/library1.jpg><div class=caption>Library 1</div></div></a></td> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/library2.jpg><div class=caption>Library 1</div></div></a></td> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/library3.jpg><div class=caption>Library 1</div></div></a></td>\
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/library4.jpg><div class=caption>Library 1</div></div></a></td> \
+  <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/pakurangalibrary.jpg><div class=caption>Pakuranga Library</div></div></a></td> \
+  <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/botanylibrary.jpg><div class=caption>Botany Library</div></div></a></td> \
+  <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/aucklandlibrary.jpg><div class=caption>Auckland Library</div></div></a></td>\
+  <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/panmurelibrary.jpg><div class=caption>Panmure Library</div></div></a></td> \
     </tr><tr> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place1.jpg><div class=caption>Library 1</div></div></a></td> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place2.jpg><div class=caption>Library 1</div></div></a></td> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place3.jpg><div class=caption>Library 1</div></div></a></td> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/school1.jpg><div class=caption>See More!</div></div></a></td> \
+    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place1.jpg><div class=caption>Point Chevalier</div></div></a></td> \
+    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place2.jpg><div class=caption>Auckland Central</div></div></a></td> \
+    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place3.jpg><div class=caption>Avondale School</div></div></a></td> \
+    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/school1.jpg><div class=caption>See More</div></div></a></td> \
     </tr></table>'
-  document.getElementById('dash').innerHTML = '<center><h1>Group Suggestions [' +
-      location + ']</h1>' + table + '</center>';
+  document.getElementById('dash').innerHTML =
+      '<center><h1>Group Suggestions [' + location + ']</h1>' + table +
+      '</center>';
 }
 
 function myevents() {
   let table = '<table><tr> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/library1.jpg><div class=caption>Library 1</div></div></a></td> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/library2.jpg><div class=caption>Library 1</div></div></a></td> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/library3.jpg><div class=caption>Library 1</div></div></a></td>\
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/library4.jpg><div class=caption>Library 1</div></div></a></td> \
+  <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/pakurangalibrary.jpg><div class=caption>Pakuranga Library</div></div></a></td> \
+  <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/botanylibrary.jpg><div class=caption>Botany Library</div></div></a></td> \
+  <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/aucklandlibrary.jpg><div class=caption>Auckland Library</div></div></a></td>\
+  <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/panmurelibrary.jpg><div class=caption>Panmure Library</div></div></a></td> \
     </tr><tr> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place1.jpg><div class=caption>Library 1</div></div></a></td> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place2.jpg><div class=caption>Library 1</div></div></a></td> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place3.jpg><div class=caption>Library 1</div></div></a></td> \
+    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place1.jpg><div class=caption>Point Chevalier</div></div></a></td> \
+    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place2.jpg><div class=caption>Auckland Central</div></div></a></td> \
+    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place3.jpg><div class=caption>Avondale School</div></div></a></td> \
     <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/school1.jpg><div class=caption>See More</div></div></a></td> \
     </tr></table>'
   document.getElementById('dash').innerHTML =
@@ -72,14 +73,14 @@ async function eventsuggestions() {
   var location = document.getElementById('user_district').innerText;
   console.log(location);
   let table = '<table><tr> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/library1.jpg><div class=caption>Library 1</div></div></a></td> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/library2.jpg><div class=caption>Library 1</div></div></a></td> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/library3.jpg><div class=caption>Library 1</div></div></a></td>\
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/library4.jpg><div class=caption>Library 1</div></div></a></td> \
+  <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/pakurangalibrary.jpg><div class=caption>Pakuranga Library</div></div></a></td> \
+  <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/botanylibrary.jpg><div class=caption>Botany Library</div></div></a></td> \
+  <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/aucklandlibrary.jpg><div class=caption>Auckland Library</div></div></a></td>\
+  <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/panmurelibrary.jpg><div class=caption>Panmure Library</div></div></a></td> \
     </tr><tr> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place1.jpg><div class=caption>Library 1</div></div></a></td> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place2.jpg><div class=caption>Library 1</div></div></a></td> \
-    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place3.jpg><div class=caption>Library 1</div></div></a></td> \
+    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place1.jpg><div class=caption>Point Chevalier</div></div></a></td> \
+    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place2.jpg><div class=caption>Auckland Central</div></div></a></td> \
+    <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/place3.jpg><div class=caption>Avondale School</div></div></a></td> \
     <td><a href=library/pakurangalibrary><div class=tablecontainer><img class=imageHolder src=../pics/school1.jpg><div class=caption>See More</div></div></a></td> \
     </tr></table>'
   document.getElementById('dash').innerHTML =
@@ -113,17 +114,18 @@ function suggestions() {
     <td><div class=suggested><h2>Rust</h2><br><br>Idea: A workshop to teach students and children how to use rust <br><br> <button onclick="increment1()">Vote</button><div id=num1>0</div></td> \
     </tr></table>'
   document.getElementById('eventspage').innerHTML =
-      '<center><br><h2>Vote for you favourite events!</h2>' + table + '<br></center>'; 
+      '<center><br><h2>Vote for you favourite events!</h2>' + table +
+      '<br></center>';
 }
 
 function increment() {
   n += 1;
-  document.getElementById('num').innerHTML = n; 
+  document.getElementById('num').innerHTML = n;
 }
 
 function increment1() {
   x += 1;
-  document.getElementById('num1').innerHTML = x; 
+  document.getElementById('num1').innerHTML = x;
 }
 
 function moremyevents() {
@@ -133,7 +135,8 @@ function moremyevents() {
     </tr></table>'
 
   document.getElementById('eventspage').innerHTML =
-      '<center><br><h2>You are currently registered for these events!</h2>' + table + '<br></center>';
+      '<center><br><h2>You are currently registered for these events!</h2>' +
+      table + '<br></center>';
 }
 
 function suggestedforyou() {
@@ -142,8 +145,9 @@ function suggestedforyou() {
     <td><div class=suggested><h2>Basics of Scratch</h2>Where: Santa Clara County High School<br><br> When: 16 May 2019, 10:30 - 12:30 <br><br> Organiser: Code club will be holding an event teaching children between the ages of 5 - 8, how to use scratch.<br><br></td> \
     </tr></table>'
 
-  document.getElementById('eventspage').innerHTML = 
-    '<center><br><h2>Events in your local area!</h2>' + table + '<br></center>';
+  document.getElementById('eventspage').innerHTML =
+      '<center><br><h2>Events in your local area!</h2>' + table +
+      '<br></center>';
 }
 function getCurrentLocationFromIP(ip = null) {
   var API_KEY = '03323b4d7a3740f1b37d65b5f1c0c17d';
